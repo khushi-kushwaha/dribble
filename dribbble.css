@@ -1,0 +1,165 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+#main{
+    height: 100%;
+    width: 100%;
+}
+#nav{
+    position: relative;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+}
+
+#nav-pt1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 30%;
+}
+#nav-pt1 a{
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    font-weight: 500;
+    font-family:"gilroy";
+}
+#nav img{
+    height: 55px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+#nav-pt2 {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: 30%;
+    gap: 40px;
+}
+#nav-pt2 button{
+    padding: 15px 25px;
+    border-radius: 50px;
+    border: none;
+    background-color: black;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+}
+#nav-pt2 #login{
+    background-color: #fff;
+    color: black;
+    font-weight: 500;
+    position: relative;
+
+}
+#nav-pt2 #login::after{
+    content: "";
+    height: 4px;
+    width: 4px;
+    border-radius: 50%;
+    background-color: black;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+}
+#centre{
+    width: 100%;
+    height: 69%;
+    text-align: center;
+    padding: 80px 0;
+}
+#centre h3{
+    display: inline-block;
+    padding: 8px 14px;
+    background-color: #D9B9F1;
+    border-radius: 50px;
+    font-family: "Source Serif 4";
+    font-weight: 500;
+    font-size: 17px;
+}
+#centre h1{
+    font-size: 70px;
+    font-family: "Source Serif 4";
+    line-height: 75px;
+    margin-top: 40px;
+    font-weight: 500;
+}
+#centre h4{
+    font-size: 20px;
+    font-family: "Mona Sans";
+    font-weight: 900;
+    margin: 30px;
+}
+#centre button{
+    padding: 20px 25px;
+    border-radius: 50px;
+    border: none;
+    background-color: black;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+#slider{
+    margin-top: 40px;
+    height: 48%;
+    width: 100%;
+    white-space: nowrap;
+    overflow-y: hidden;
+    overflow-x: auto;
+    padding: 10px 0;
+}
+#slider::-webkit-scrollbar{
+    display: none;
+}
+.bottom{
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+    animation-name:scroller ;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes scroller {
+    from{
+        transform: translateX(0%);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+.bottom .elem{ 
+    height: 100%;
+    width: 18%;
+    border-radius: 35px;
+    overflow: hidden;
+    display: inline-block;
+    margin: 0 13px;
+}
+.bottom .elem img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.bottom .elem video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
